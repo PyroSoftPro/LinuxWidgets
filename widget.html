@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Widget</title>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <div id="widget-shell">
+    <!-- Accent glow (top edge) -->
+    <div id="accent-bar"></div>
+
+    <!-- Drag handle (top area) -->
+    <div id="drag-handle">
+      <div id="widget-controls">
+        <button id="btn-settings" title="Settings">
+          <svg viewBox="0 0 20 20" width="14" height="14"><circle cx="10" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 1.5v2M10 16.5v2M18.5 10h-2M3.5 10h-2M16 4L14.5 5.5M5.5 14.5L4 16M16 16l-1.5-1.5M5.5 5.5L4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button id="btn-close" title="Close">
+          <svg viewBox="0 0 20 20" width="12" height="12"><line x1="4" y1="4" x2="16" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="4" x2="4" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Widget content area - filled by widget type JS -->
+    <div id="widget-content"></div>
+
+    <!-- Settings panel (slides in) -->
+    <div id="settings-panel" class="hidden">
+      <div id="settings-header">
+        <span>Settings</span>
+        <button id="settings-close">&times;</button>
+      </div>
+      <div id="settings-body"></div>
+    </div>
+  </div>
+  <script src="widget.js"></script>
+</body>
+</html>
